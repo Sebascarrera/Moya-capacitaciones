@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #141414;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.line {
+    background-color: white;
+    height: 45px;
+    width: 2px;
+    margin-left: 20px;
+}
+
+
+.page-title h2 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.page-subtitle h1 {
+    margin: 0;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    color: #ffffff;
+}
+
+main {
+    padding: 20px;
+}
+
+.background-main {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/imagen-fondo-capacitaciones.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Ancho del main */
+    min-height: 100vh; /* Mínimo alto para cubrir toda la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.training {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.training-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.training-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.training-card h2 {
+    margin: 15px 0;
+}
+
+.training-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.pdf-container {
+    margin: 20px 0;
+    text-align: center;
+    height: 100% !important;
+}
+
+iframe{
+    height: 650px !important;
+}
+
+.congratulations {
+    text-align: center;
+    padding: 50px;
+}
+
+.congratulations img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.quiz-container img {
+    width: 100%;
+    text-align: center;
+}

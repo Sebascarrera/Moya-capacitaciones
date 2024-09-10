@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo_moya_wh.png" alt="Logo">
+        </div>
+        <div class="line"></div>
+        <div class="page-title">
+            <h2>Te lo explica con plastilina</h2>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <div class="pdf-container">
+            <iframe src="./img/pdf-archivos/seguridad-y-salud/Presentación Seguridad y Salun en el trabajo en Moya Producciones (1).pdf" width="100%" height="500px"></iframe>
+        </div>
+        <div class="navigation">
+            <button onclick="nextPage()">Siguiente</button>
+        </div>
+    </main>
+    
+    <script>
+        // Variable para llevar la cuenta de la página actual
+        let step = 1;
+    
+        function nextPage() {
+            const mainContent = document.getElementById('main-content');
+            
+            // Cambia el contenido del main dependiendo del paso en el que estés
+            if (step === 1) {
+                // Paso 1: Mostrar el video de YouTube
+                mainContent.innerHTML = `
+                    <div class="video-container">
+                        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="navigation">
+                        <button onclick="nextPage()">Siguiente</button>
+                    </div>
+                `;
+                step++; // Incrementar al siguiente paso
+            } else if (step === 2) {
+                // Paso 2: Mostrar el cuestionario
+                mainContent.innerHTML = `
+                    <div class="quiz-container">
+                        <form id="quiz-form">
+                            <img src="./img/evaluacion.png" alt="Evaluación">
+                            <h3>Pregunta 1: ¿Cuál es el tema principal del video?</h3>
+                            <label><input type="checkbox" name="question1" value="1"> Opción 1</label><br>
+                            <label><input type="checkbox" name="question1" value="2"> Opción 2</label><br>
+                            <label><input type="checkbox" name="question1" value="3"> Opción 3</label><br>
+                            
+                            <h3>Pregunta 2: ¿Cuál es la función principal de los equipos de protección?</h3>
+                            <label><input type="checkbox" name="question2" value="1"> Opción 1</label><br>
+                            <label><input type="checkbox" name="question2" value="2"> Opción 2</label><br>
+                            <label><input type="checkbox" name="question2" value="3"> Opción 3</label><br>
+                            
+                            <h3>Pregunta 3: ¿Qué acciones deben tomarse después de una emergencia?</h3>
+                            <label><input type="checkbox" name="question3" value="1"> Opción 1</label><br>
+                            <label><input type="checkbox" name="question3" value="2"> Opción 2</label><br>
+                            <label><input type="checkbox" name="question3" value="3"> Opción 3</label><br>
+    
+                            <button type="submit" onclick="submitQuiz(event)">Enviar respuestas</button>
+                        </form>
+                    </div>
+                `;
+                step++; // Incrementar al siguiente paso
+            }
+        }
+    
+        // Función para manejar el envío del cuestionario
+        function submitQuiz(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+    
+            // Aquí puedes agregar lógica para evaluar las respuestas y enviar los resultados
+            alert('Respuestas enviadas');
+        }
+
+        function submitQuiz(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            // Aquí puedes agregar lógica para evaluar las respuestas, si es necesario
+
+            // Redirige a la página de felicitaciones
+            window.location.href = "finalizado.html";
+}
+
+    </script>
+    
+</body>
+</html>
