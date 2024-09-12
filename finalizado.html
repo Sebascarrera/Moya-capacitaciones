@@ -19,9 +19,19 @@
         </div>
     </header>
     <main class="congratulations">
-        <img src="./img/diploma-capacitacion-prueba2.png" alt="Felicitaciones">
         <h1>¡Felicitaciones!</h1>
-        <p>Has completado exitosamente la capacitación [Nombre de la Capacitación]. Agradecemos tu dedicación y esfuerzo. Tu diploma ha sido enviado al correo electrónico registrado.</p>
+        <h2 id="nombre-completo"></h2>
+        <p>Has completado exitosamente la capacitación.</p>
+        <p>Tu diploma ha sido enviado al correo electrónico registrado, agradecemos tu dedicación y esfuerzo.</p>
+        <p></p>
+        <img src="./img/diploma-capacitacion-prueba2.png" alt="Felicitaciones">        
     </main>
+    <script>
+        // Recuperar el nombre completo almacenado en sessionStorage
+        var nombreCompleto = sessionStorage.getItem('nombreCompleto');
+        if (nombreCompleto) {
+            document.getElementById('nombre-completo').textContent = nombreCompleto;
+        }
+    </script>
 </body>
 </html>

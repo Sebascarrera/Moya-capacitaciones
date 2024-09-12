@@ -21,7 +21,7 @@
         <div class="page-subtitle">
             <h1>Registro de Usuarios</h1>
         </div>
-        <form id="registration-form" action="capacitaciones.html">
+        <form id="registration-form" action="capacitaciones.html" onsubmit="guardarNombre()">
             <label for="nombre">Nombre Completo:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -37,5 +37,12 @@
             <button type="submit">Registrarse</button>
         </form>
     </main>
+    <script>
+        function guardarNombre() {
+            // Guardar el nombre completo en sessionStorage
+            var nombreCompleto = document.getElementById('nombre').value;
+            sessionStorage.setItem('nombreCompleto', nombreCompleto);
+        }
+    </script>
 </body>
 </html>
